@@ -25,22 +25,18 @@ function imprimirFilmePelaPosicao(posicaoDoFilmeNaArray) {
   const filme = catalogo[posicaoDoFilmeNaArray];
 
   // 1: Titanic, duração de 3 hora(s), atores: Kate Winslet, Leonardo DiCaprio, lançado em 1998, em cartaz: [simmm! | naaaão]
-  const codigoETitulo = filme.codigo + " " + filme.titulo;
-  const duracao = filme.duracao + " horas(s)";
-  const atores = "atores: " + filme.atores.join(", ");
-  const lancado = "lancado em " + filme.anoDeLancamento;
-  const emCartaz = "em cartaz: " + (filme.emCartaz ? "Sim" : "Não");
+  const atores = filme.atores.join(", ");
 
-  const textoDescritivoDoFilme =
-    codigoETitulo +
-    ", " +
-    duracao +
-    ", " +
-    atores +
-    ", " +
-    lancado +
-    ", " +
-    emCartaz;
+  const textoDescritivoDoFilme = `
+    Filme:
+    ------
+    Código: ${filme.codigo},
+    Título: ${filme.titulo} ${filme.duracao} horas(s),
+    Atores: ${atores},
+    Lancado em ${filme.anoDeLancamento},
+    Em cartaz: ${filme.emCartaz ? "Sim" : "Não"}
+
+  `;
 
   console.log(textoDescritivoDoFilme);
 }
@@ -55,16 +51,23 @@ const listarFilmesEmCartaz = () => {
   for (let idx = 0; idx < catalogo.length; idx++) {
     const filme = catalogo[idx];
 
-    if (filme.emCartaz){
+    if (filme.emCartaz) {
       imprimirFilmePelaPosicao(idx);
     }
   }
 };
 
-function alterarStatusEmCartaz (posicaoDoFilmeNaArray){
+function buscarFilme(posicaoDoFilmeNaArray, callback) {
   const filme = catalogo[posicaoDoFilmeNaArray];
-  const invertendoValorEmCartaz = !filme.emCartaz;
-  filme.emCartaz = invertendoValorEmCartaz;
+  setTimeout(callback, 5000, filme)
+}
+
+
+function alterarStatusEmCartaz(posicaoDoFilmeNaArray) {  
+  const filme = buscarFilme(posicaoDoFilmeNaArray, function(filme) {
+    const invertendoValorEmCartaz = !filme.emCartaz;
+    filme.emCartaz = invertendoValorEmCartaz;
+  });
 }
 
 module.exports = {

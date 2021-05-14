@@ -10,12 +10,16 @@ cineHouse.adicionarFilme(
 );
 
 const posicaoDesejada = 1;
-console.log('Filme ' + posicaoDesejada);
+console.log(`Filme ${posicaoDesejada}`);
 cineHouse.imprimirFilmePelaPosicao(posicaoDesejada);
 console.log();
 
-console.log('Alterado propriedade em emCartaz do filme na posição ' 
-  + posicaoDesejada);
+
+console.log(`
+
+  Alterado propriedade em emCartaz do filme na posição ${posicaoDesejada}
+
+`);
 
 cineHouse.alterarStatusEmCartaz(posicaoDesejada);
 cineHouse.imprimirFilmePelaPosicao(posicaoDesejada);
