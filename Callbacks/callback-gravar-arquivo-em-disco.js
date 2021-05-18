@@ -1,4 +1,3 @@
-
 function gravarArquivoEmDisco(cb) {
     // operacao de salvar
     cb();

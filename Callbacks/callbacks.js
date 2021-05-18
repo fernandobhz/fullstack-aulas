@@ -56,4 +56,13 @@ function euSouPatraoMeuDia() {
     });
 }
 
+function euSouPatraoMeuDia() {
+    chamarVideo(function(resultadoVideo) {        
+        
+    });
+
+    informarNome("pastel", function(resultadoComida) {
+    });
+}
+
 euSouPatraoMeuDia()
