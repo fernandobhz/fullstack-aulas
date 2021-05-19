@@ -42,7 +42,7 @@ function imprimirFilmePelaPosicao(posicaoDoFilmeNaArray) {
 }
 
 function imprimirFilmePeloCodigo(codigoFilme) {
-  const filme = catalogo.find(filme.codigo === codigoFilme);
+  const filme = catalogo.find(filme => filme.codigo === codigoFilme);
 
   // 1: Titanic, duração de 3 hora(s), atores: Kate Winslet, Leonardo DiCaprio, lançado em 1998, em cartaz: [simmm! | naaaão]
   const atores = filme.atores.join(", ");
@@ -81,8 +81,8 @@ const listarFilmesDeLongaDuracao2 = () => {
 
 const listarFilmesDeLongaDuracaoPeloCodigo = () =>
   catalogo
-    .filter((filme) => filme.duracao >= 2)
-    .forEach((filme) => {
+    .filter(filme => filme.duracao >= 2)
+    .forEach(filme => {
       imprimirFilmePeloCodigo(filme.codigo);
     });
 

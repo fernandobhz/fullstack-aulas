@@ -46,6 +46,13 @@ function novo2() {
   console.log();
 }
 
+function novo3() {
+  console.log("Filmes de Longa Duracao");
+  cineHouse.listarFilmesDeLongaDuracaoPeloCodigo();
+  console.log();
+}
+
 if (process.argv[2] == "todos") todos();
 if (process.argv[2] == "novo") novo();
 if (process.argv[2] == "novo2") novo2();
+if (process.argv[2] == "novo3") novo3();
