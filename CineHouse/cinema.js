@@ -113,8 +113,11 @@ module.exports = {
   catalogo,
   adicionarFilme,
   imprimirFilmePelaPosicao,
+  imprimirFilmePeloCodigo,
   listarTodosOsFilmes,
   listarFilmesEmCartaz,
   alterarStatusEmCartaz,
   listarFilmesDeLongaDuracao,
+  listarFilmesDeLongaDuracao2,
+  listarFilmesDeLongaDuracaoPeloCodigo
 };
