@@ -1,14 +1,14 @@
 [
   {
-    "codigo": 100,
+    "codigo": 1,
     "titulo": "Titanic",
-    "duracao": 3,
+    "duracao": 1,
     "atores": ["Kate Winslet", "Leonardo DiCaprio"],
     "anoDeLancamento": 1998,
     "emCartaz": false
   },
   {
-    "codigo": 200,
+    "codigo": 2,
     "titulo": "Veloses e Furiosos 1",
     "duracao": 2,
     "atores": ["Vin Diesel", "The Rock", "Paul Walker"],
